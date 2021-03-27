@@ -1,0 +1,9 @@
+node_modules/
+logs/
+pages/*.index.json
+.DS_Store
+**.pyc
+board/node_modules
+board/build
+board/src/config/firebase.json
+util/__pycache__/

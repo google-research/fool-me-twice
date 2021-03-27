@@ -1,0 +1,82 @@
+{
+  "name": "board",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "@material/checkbox": "^5.1.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.1.2",
+    "csnlp": "0.0.3",
+    "draft-js": "^0.11.6",
+    "firebase": "^7.17.1",
+    "firebaseui": "^4.6.1",
+    "fuzzyset.js": "0.0.91",
+    "highlight-within-textarea": "^2.0.5",
+    "levenshtein-edit-distance": "^2.0.5",
+    "lodash": "^4.17.19",
+    "lodash.chunk": "^4.2.0",
+    "lodash.debounce": "^4.0.8",
+    "lodash.flatten": "^4.0.8",
+    "lodash.uniq": "^4.0.8",
+    "lunr": "^2.3.8",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-firebase-hooks": "^2.2.0",
+    "react-firebaseui": "^4.1.0",
+    "react-router-dom": "^5.2.0",
+    "react-router-hash-link": "^1.2.2",
+    "react-scripts": "^3.4.3",
+    "seedrandom": "^3.0.5",
+    "stopword": "^1.0.1"
+  },
+  "scripts": {
+    "local": "react-scripts start",
+    "start": "serve build",
+    "prestart": "npm install -g serve",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "format": "prettier --write \"src/**/*.+(js|jsx)\"",
+    "lint": "eslint src"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run format"
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "plugin:prettier/recommended"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "printWidth": 80,
+    "bracketSpacing": false,
+    "trailingComma": "es5"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.2.5",
+    "prettier": "^1.19.1",
+    "typescript": "^3.9.7"
+  }
+}

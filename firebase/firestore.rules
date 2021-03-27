@@ -1,0 +1,68 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    // match /{document=**} {
+    //   allow read, write: if request.time < timestamp.date(2020, 8, 22) && isSignedIn();
+    // }
+
+    function isValidAuthor(rsc) {
+      return isSignedIn() && request.resource.data.author == request.auth.uid
+       && (rsc == null || rsc.data.author == request.auth.uid);
+    }
+
+    match /pages/{page} {
+      allow get: if isSignedIn();
+    }
+
+    match /indices/{index} {
+      allow get: if isSignedIn();
+    }
+
+    match /workflows/{workflow} {
+      allow get: if isSignedIn();
+    }
+
+    match /status/{user} {
+      allow read, write: if isSignedIn() && user == request.auth.uid;
+    }
+
+    match /notifications/{user} {
+      allow read, write: if isSignedIn() && user == request.auth.uid;
+    }
+
+    match /users/{user} {
+      allow read, write: if isSignedIn() && user == request.auth.uid;
+    }
+
+    match /fibs/{fib} {
+      allow get: if isSignedIn();
+      allow create: if isValidAuthor(resource);
+    }
+
+    match /leaderboard/{user} {
+      allow list: if isSignedIn();
+      allow get: if isSignedIn() && user == request.auth.uid;
+    }
+
+    // match /fibs/{fib}/votes/{user} {
+    //   allow create, update: if isValidAuthor(resource) && user == request.auth.uid;
+    // }
+
+    match /fibs/{fib}/likes/{user} {
+      allow create, update: if isSignedIn() && user == request.auth.uid;
+    }
+
+    match /fibs/{fib}/dislikes/{user} {
+      allow create, update: if isSignedIn() && user == request.auth.uid;
+    }
+
+    match /fibs/{fib}/reports/{user} {
+      allow create, update: if isSignedIn() && user == request.auth.uid;
+    }
+  }
+}

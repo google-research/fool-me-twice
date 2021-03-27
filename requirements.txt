@@ -1,0 +1,4 @@
+spacy~=3.0.5
+wikipedia-api~=0.5.4
+google-cloud-firestore~=2.0.2
+google-cloud-storage~=1.36.2
