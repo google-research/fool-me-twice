@@ -14,9 +14,9 @@ This how the game looks: the first screen allows users to choose topics of their
 
 | Split  | Claims | Entailed Proportion | Pages | Avg. # Tokens Claim | Avg. # Tokens Evidence |
 |--------|--------|---------------------|-------|---------------------|------------------------|
-| [Train](https://github.com/google-research/fool-me-twice/blob/master/dataset/train.jsonl) | 10,419 | 49.2%               | 1,811 | 15                  | 30                     |
-| [Dev](https://github.com/google-research/fool-me-twice/blob/master/dataset/dev.jsonl)   | 1,169  | 51.0%               | 209   | 15                  | 31                     |
-| [Test](https://github.com/google-research/fool-me-twice/blob/master/dataset/test.jsonl)  | 1,380  | 49.4%               | 234   | 15                  | 31                     |
+| [Train](https://github.com/google-research/fool-me-twice/blob/main/dataset/train.jsonl) | 10,419 | 49.2%               | 1,811 | 15                  | 30                     |
+| [Dev](https://github.com/google-research/fool-me-twice/blob/main/dataset/dev.jsonl)   | 1,169  | 51.0%               | 209   | 15                  | 31                     |
+| [Test](https://github.com/google-research/fool-me-twice/blob/main/dataset/test.jsonl)  | 1,380  | 49.4%               | 234   | 15                  | 31                     |
 | Total  | 12,968 | 49.4%               | 2,254  | 15                  | 30                     |
 
 ## Running analysis and training models on the date
@@ -141,7 +141,7 @@ After you run the create workflow script, you can import the resulting `csv` fil
 
 Please cite Fool Me Twice: Entailment from Wikipedia Gamification published at NAACL 2021
 ```
-@inproceedings{eisenschlos-etal-2019-fm2,
+@inproceedings{eisenschlos-etal-2021-fm2,
     title = "Fool Me Twice: Entailment from Wikipedia Gamification",
     author = "Eisenschlos, Julian Martin and
       Dhingra, Bhuwan and
