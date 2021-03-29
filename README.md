@@ -4,7 +4,7 @@ Code for the game, experiments and data introduced in the paper Fool Me Twice: E
 
 In this work we set up a game for players to distinguish entailed from refuted statements by looking at the evidence from their Wikipedia page. Players can also write their own statements and they are rewarded by making them hard to guess but properly backed by the evidence, which they have to choose. We release a dataset of nearly 13K statements with their evidence.
 
-This how the game looks: the first screen allows users to choose topics of their interest. In the second screen they reveal evidence and make a guess before time runs out.
+This is how the game looks: the first screen allows users to choose topics of their interest. In the second screen they reveal evidence and make a guess before time runs out.
 <p align="center">
 <img src="images/menu.png" height="200">
 <img src="images/vote.png" height="200">
