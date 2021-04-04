@@ -21,7 +21,9 @@ This is how the game looks: the first screen allows users to choose topics of th
 
 ## Running analysis and training models on the date
 
-1. The LMI Analysis [notebook](https://colab.research.google.com/github/google-research/fool-me-twice/blob/master/notebooks/lmi_analysis.ipynb) shows the most informative terms in FM2 compared to FEVER.
+1. NLI Baselines [notebook](https://colab.research.google.com/github/google-research/fool-me-twice/blob/master/notebooks/nli_baselines.ipynb) trains BERT entailment models on FM2 and FEVER.
+
+2. The LMI Analysis [notebook](https://colab.research.google.com/github/google-research/fool-me-twice/blob/master/notebooks/lmi_analysis.ipynb) shows the most informative terms in FM2 compared to FEVER.
 
 ## Running the game
 
