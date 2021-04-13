@@ -1,6 +1,6 @@
 # Fool Me Twice
 
-Code for the game, experiments and data introduced in the paper Fool Me Twice: Entailment from Wikipedia Gamification published at NAACL 2021.
+Code for the game, experiments and data introduced in the paper [Fool Me Twice: Entailment from Wikipedia Gamification](https://arxiv.org/abs/2104.04725) published at NAACL 2021.
 
 In this work we set up a game for players to distinguish entailed from refuted statements by looking at the evidence from their Wikipedia page. Players can also write their own statements and they are rewarded by making them hard to guess but properly backed by the evidence, which they have to choose. We release a dataset of nearly 13K statements with their evidence.
 
@@ -153,6 +153,7 @@ Please cite Fool Me Twice: Entailment from Wikipedia Gamification published at N
     booktitle = "Proceedings of the 2021 Conference of the North {A}merican Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)",
     year = "2021",
     publisher = "Association for Computational Linguistics",
+    url = "https://arxiv.org/abs/2104.04725",
     abstract = "We release FoolMeTwice (FM2 for short), a large dataset of challenging entailment pairs collected through a fun multi-player game. Gamification encourages adversarial examples, drastically lowering the number of examples that can be solved using shortcuts compared to other popular entailment datasets. Players are presented with two tasks. The first task asks the player to write a plausible claim based on the evidence from a Wikipedia page. The second one shows two plausible claims written by other players, one of which is false, and the goal is to identify it before the time runs out. Players pay to see clues retrieved from the evidence pool: the more evidence the player needs, the harder the claim. Game-play between motivated players leads to diverse strategies for crafting claims, such as temporal inference and diverting to unrelated evidence, and results in higher quality data for the entailment and evidence retrieval tasks. We open source the dataset and game code.",
 }
 ```
