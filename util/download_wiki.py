@@ -20,7 +20,7 @@ import json
 import tqdm
 from collections import defaultdict
 from glob import glob
-from os
+import os
 import subprocess
 import fibs_firebase_config
 
@@ -91,7 +91,7 @@ def process_page(
     page: Text,
 ) -> bool:
     """Fetches a single page and creates index files."""
-    filename = os.path.join("pages", "{page}.sentences.json")
+    filename = os.path.join("pages", f"{page}.sentences.json")
     output_filename = filename.replace(".sentences.", ".index.")
     if not os.path.exists(filename):
         article = wiki.page(page)
