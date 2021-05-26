@@ -96,7 +96,17 @@ const createVote = async (req, res) => {
 
     const batch = db.batch();
     const points = success ? Math.min(MAX_VERIFY_POINTS, Math.floor(time)) : 0;
-    // @todo: Assert this don't already exist
+
+    // check if the player has already voted on these claims
+    const priorPoints = await Promise.all(fibs.map(
+      fibId => db.doc(`fibs/${fibId}/votes/${uid}`).get().then(f => f.exists)
+    ));
+    // The player already voted on some of this claims so we are not giving votes twice.
+    if (priorPoints.some(b => b)) {
+      res.json({success, points: 0})
+      return;
+    }
+
     fibs.forEach(fibId =>
       batch.set(
         db.doc(`fibs/${fibId}/votes/${uid}`),
