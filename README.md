@@ -133,7 +133,9 @@ see new content and get points for as the claims they wrote are voted by other p
 To run the workflow generation, run the script `python util/create_workflow.py`.
 This will create a new workflow with the name of today's date (e.g., 2020-12-25).
 You then need to change the name of the active workflow in the Firebase remote
-config to reflect the current active workflow.
+config to reflect the current active workflow. This can be done by navigating 
+to https://console.firebase.google.com/u/0/project/PROJECT_ID/config and adding a string parameter
+`kWorkflowID`. This parameter will override in realtime the `defaultConfig` of [board/src/config/server.js](https://github.com/google-research/fool-me-twice/blob/main/board/src/config/server.js).
 
 To debug, change the name of the workflow to something not actively being used (this is possible with a flag, check options using `python util/create_workflow.py --help`).
 The script will also do a local backup of all the claims created so far.
